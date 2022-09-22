@@ -28,3 +28,4 @@ namespace Paycompute.Entity
         public string Postcode { get; set; }
         public IEnumerable<PaymentRecord> PaymentRecords { get; set; }
     }
+}
