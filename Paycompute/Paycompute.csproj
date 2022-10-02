@@ -20,4 +20,8 @@
     <ProjectReference Include="..\Paycomputer.service\Paycomputer.service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
 </Project>

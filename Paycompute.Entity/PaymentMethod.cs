@@ -1,6 +1,9 @@
 ﻿namespace Paycompute.Entity
 {
-    public class PaymentMethod
+    public enum PaymentMethod
     {
+        Bank,
+        Cash,
+        Check
     }
 }
