@@ -15,6 +15,8 @@ namespace Paycompute.Entity
         public string EmployeeNo { get; set; }
         [Required, MaxLength(50)]
         public string FirstName { get; set; }
+        [Required, MaxLength(200)]
+        public string FullName { get; set; }
         [MaxLength(50)]
         public string MidleName { get; set; }
         [Required, MaxLength(50)]
@@ -36,6 +38,7 @@ namespace Paycompute.Entity
         public string City { get; set; }
         [Required, MaxLength(50)]
         public string Postcode { get; set; }
+      
         public IEnumerable<PaymentRecord> PaymentRecords { get; set; }
     }
 }
