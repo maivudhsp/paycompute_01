@@ -8,9 +8,7 @@ namespace Paycompute.Entity
         public int Id { get; set; }
         [ForeignKey("Employee")]
         public int EmployeeId { get; set; }
-        public Employee Employee { get; set; }
-        [MaxLength(100)]
-        public string FullName { get; set; }
+        public Employee Employee { get; set; }     
         public string NiNo { get; set; }
         public DateTime PayDate { get; set; }
         public string PayMonth { get; set; }
