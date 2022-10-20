@@ -11,18 +11,20 @@
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.6" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Paycompute.Entity\Paycompute.Entity.csproj" />
+    <ProjectReference Include="..\Paycompute.Persistence\Paycompute.Persistence.csproj" />
     <ProjectReference Include="..\Paycomputer.service\Paycomputer.service.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="wwwroot\images\employee\" />
+    <Folder Include="wwwroot\images\employees\" />
   </ItemGroup>
 
 </Project>

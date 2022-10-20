@@ -35,7 +35,7 @@ namespace Paycompute.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            var model = new EmployeeIndexViewModel();
+            var model = new CreateViewModel();
             return View(model);
         }
         [HttpPost]
@@ -69,17 +69,17 @@ namespace Paycompute.Controllers
                 };
                 if(model.ImageUrl != null && model.ImageUrl.Length > 0)
                 {
-                    var uploadDir = @"images/employess";
+                    var uploadDir = @"images/employees";
                     var fileName = Path.GetFileNameWithoutExtension(model.ImageUrl.FileName);
                     var extension = Path.GetExtension(model.ImageUrl.FileName);
                     var webrootPath = _hostingEnvironment.WebRootPath;
                     fileName = DateTime.UtcNow.ToString("yymmssfff") + fileName + extension;
                     var path = Path.Combine(webrootPath, uploadDir, fileName);
-                    model.ImageUrl.CopyToAsync(new FileStream(path, FileMode.Create));
+                    await model.ImageUrl.CopyToAsync(new FileStream(path, FileMode.Create));
                     employee.ImageUrl = "/" + uploadDir + "/" + fileName;
                 }
                 await _employeeService.CreateAsync(employee);
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index");
             }
             return View();
         }
@@ -147,13 +147,13 @@ namespace Paycompute.Controllers
                 employee.Designation = model.Designation;
                 if(model.ImageUrl != null && model.ImageUrl.Length > 0)
                 {
-                    var uploadDir = @"images/employess";
+                    var uploadDir = @"images/employees";
                     var fileName = Path.GetFileNameWithoutExtension(model.ImageUrl.FileName);
                     var extension = Path.GetExtension(model.ImageUrl.FileName);
                     var webrootPath = _hostingEnvironment.WebRootPath;
                     fileName = DateTime.UtcNow.ToString("yymmssfff") + fileName + extension;
                     var path = Path.Combine(webrootPath, uploadDir, fileName);
-                    model.ImageUrl.CopyToAsync(new FileStream(path, FileMode.Create));
+                    await model.ImageUrl.CopyToAsync(new FileStream(path, FileMode.Create));
                     employee.ImageUrl = "/" + uploadDir + "/" + fileName;
                 }
                 await _employeeService.UpdateAsync(employee);

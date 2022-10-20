@@ -6,16 +6,16 @@ namespace Paycompute.Models
     public class EmployeeEditViewModel
     {
         public int Id { get; set; }
-        [Required(ErrorMessage = "Employee Number is required")]
-        [RegularExpression(@"^[A-Z]{3,3}[0-9]{3}$")]
+        [Required(ErrorMessage = "Employee Number is required"),
+            RegularExpression(@"^[A-Z]{3,3}[0-9]{3}$")]
         public string EmployeeNo { get; set; }
         [Required(ErrorMessage = "First Name is required"), StringLength(50, MinimumLength = 2)]
-        [RegularExpression(@"^[A-Z][a-zA-Z]""'\s-]*$"), Display(Name = "First Name")]
+        [RegularExpression(@"^[A-Z][a-zA-Z""'\s-]*$"), Display(Name = "First Name")]
         public string FirstName { get; set; }
         [StringLength(50), Display(Name = "Middle Name")]
         public string MidleName { get; set; }
         [Required(ErrorMessage = "Last Name is required"), StringLength(50, MinimumLength = 2)]
-        [RegularExpression(@"^[A-Z][a-zA-Z]""'\s-]*$"), Display(Name = "Last Name")]
+        [RegularExpression(@"^[A-Z][a-zA-Z""'\s-]*$"), Display(Name = "Last Name")]
         public string LastName { get; set; }
         [Required, MaxLength(200)]
         public string Gender { get; set; }
