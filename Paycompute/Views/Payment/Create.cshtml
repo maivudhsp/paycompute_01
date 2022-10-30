@@ -15,20 +15,20 @@
                 </ol>
             </nav><br /><br />
             <form method="post" asp-controller="Payment" asp-action="Create">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div asp-validation-summary="All" class="text-danger"></div>
                 <div class="form-group">
-                    <label asp-for="EmployeeId"></label>
-                    <select asp-for="EmployeeId" class="form-control" asp-items="ViewBag.employees">
+                    <label asp-for="@Model.EmployeeId"></label>
+                    <select asp-for="@Model.EmployeeId" class="form-control" asp-items="@ViewBag.employees">
                         <option selected>--- Select Employee ---</option>
                     </select>
-                    <span asp-validation-for="EmployeeId" class="text-danger"></span>
+                    <span asp-validation-for="@Model.EmployeeId" class="text-danger"></span>
                 </div><br /><br /><br />
                 <div class="form-row">
                     <div class="form-group col-md-1">
-                        <label asp-for="PayMonth"></label>
+                        <label asp-for="@Model.PayMonth"></label>
                     </div>
                     <div class="form-group col-md-3">
-                        <select asp-for="PayMonth" class="form-control">
+                        <select asp-for="@Model.PayMonth" class="form-control">
                             <option selected>-- Select Month ---</option>
                             <option>January</option>
                             <option>February</option>
@@ -43,47 +43,47 @@
                             <option>November</option>
                             <option>December</option>
                         </select>
-                        <span asp-validation-for="PayMonth" class="text-danger"></span>
+                        <span asp-validation-for="@Model.PayMonth" class="text-danger"></span>
                     </div>
                     <div class="form-group col-md-1">
-                        <label asp-for="TaxYearId"></label>
+                        <label asp-for="@Model.TaxYearId"></label>
 
                     </div>
                     <div class="form-group col-md-3">
-                        <select asp-for="TaxYearId" class="form-control" asp-items="ViewBag.taxYears">
+                        <select asp-for="@Model.TaxYearId" class="form-control" asp-items="@ViewBag.taxYears">
                             <option selected>--- Select Tax Year ---</option>
                         </select>
-                        <span asp-validation-for="TaxYearId" class="text-danger"></span>
+                        <span asp-validation-for="@Model.TaxYearId" class="text-danger"></span>
                     </div>
                     <div class="form-group col-md-1">
-                        <label asp-for="PayDate"></label>
+                        <label asp-for="@Model.PayDate"></label>
                     </div>
                     <div class="form-group col-md-3">
-                        <input asp-for="PayDate" class="form-control" />
-                        <span asp-validation-for="PayDate"></span>
+                        <input asp-for="@Model.PayDate" class="form-control" />
+                        <span asp-validation-for="@Model.PayDate"></span>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-1">
-                        <label asp-for="HourlyRate"></label>
+                        <label asp-for="@Model.HourlyRate"></label>
                     </div>
                     <div class="form-group col-md-3">
-                        <input asp-for="HourlyRate" class="form-control" placeholder="0.00" />
-                        <span asp-validation-for="HourlyRate"></span>
+                        <input asp-for="@Model.HourlyRate" class="form-control" placeholder="0.00" />
+                        <span asp-validation-for="@Model.HourlyRate"></span>
                     </div>
                     <div class="form-group col-md-1">
-                        <label asp-for="HoursWorked"></label>
+                        <label asp-for="@Model.HoursWorked"></label>
                     </div>
                     <div class="form-group col-md-3">
-                        <input asp-for="HoursWorked" class="form-control" placeholder="0.00" />
-                        <span asp-validation-for="HoursWorked"></span>
+                        <input asp-for="@Model.HoursWorked" class="form-control" placeholder="0.00" />
+                        <span asp-validation-for="@Model.HoursWorked"></span>
                     </div>
                     <div class="form-group col-md-1">
-                        <label asp-for="ContractualHours"></label>
+                        <label asp-for="@Model.ContractualHours"></label>
                     </div>
                     <div class="form-group col-md-3">
-                        <input asp-for="ContractualHours" class="form-control" />
-                        <span asp-validation-for="ContractualHours"></span>
+                        <input asp-for="@Model.ContractualHours" class="form-control" />
+                        <span asp-validation-for="@Model.ContractualHours"></span>
                     </div>
                 </div><br /><br />
 
