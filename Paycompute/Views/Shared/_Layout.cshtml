@@ -63,14 +63,14 @@
                 <ul class="nav list-unstyled ps-0">
                     <li class="mb-1">
                         <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#employee" aria-expanded="false">
-                           <i class="fas fa-users fa-lg text-primary" style="margin-right:0.7em"></i>
+                           <i class="fas fa-users fa-lg text-secondary" style="margin-right:0.7em"></i>
                             <span class="menu-title">Employee</span>
                            <i class="menu-arrow text-primary"></i>
                         </button>
                         <div class="collapse" id="employee" >
                             <ul class="nav btn-toggle-nav list-unstyled flex-column sub-menu">
-                                <li class="nav-item"><a class="nav-link" asp-controller="Employee" asp-action="Create"> New Employee</a></li>
-                                <li class="nav-item"><a class="nav-link" asp-controller="Employee" asp-action="Index"> All Employees</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-controller="Employee" asp-action="Create">New Employee</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-controller="Employee" asp-action="Index">All Employees</a></li>
                             </ul>
                         </div>
                     </li>
@@ -82,8 +82,8 @@
                         </button>
                         <div class="collapse" id="Payroll" style="">
                             <ul class="nav btn-toggle-nav flex-column sub-menu list-unstyled">
-                                <li class="nav-item"><a class="nav-link" asp-controller="Pay" asp-action="Create"> New Pay</a></li>
-                                <li class="nav-item"><a class="nav-link" asp-controller="Pay" asp-action="Index"> Payment Records</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-controller="Payment" asp-action="Create">New Pay</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-controller="Payment" asp-action="Index">Payment Records</a></li>
                             </ul>
                         </div>
                     </li>

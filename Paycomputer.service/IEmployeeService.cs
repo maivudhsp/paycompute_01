@@ -1,9 +1,6 @@
-﻿using Paycompute.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Paycompute.Entity;
+
 
 namespace Paycomputer.service
 {
@@ -16,6 +13,7 @@ namespace Paycomputer.service
         Task Delete(int employeeId);
         decimal UnionFees(int id);
         decimal StudentLoanRepaymentAmount(int id, decimal totalAmount);
+        IEnumerable<SelectListItem> GetAllEmployeesForPayroll();
         IEnumerable<Employee> GetAll();
     }
 }

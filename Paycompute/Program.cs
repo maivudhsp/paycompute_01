@@ -18,6 +18,9 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+builder.Services.AddScoped<IPayService, PayService>();
+builder.Services.AddScoped<ITaxService, TaxService>();
+builder.Services.AddScoped<INationalInsuranceService, NationalInsuranceService>();
 
 builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
 {
