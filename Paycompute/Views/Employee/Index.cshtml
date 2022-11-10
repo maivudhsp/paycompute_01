@@ -44,7 +44,7 @@
                                             <a asp-action="Detil" asp-route-id="@item.Id">@item.EmployeeNo</a>
                                         </td>
                                         <td>
-                                            <img src="@Url.Content(item.ImageUrl)" alt="image"/>
+                                            <a asp-action="download" asp-route-stringFile="@Url.Content(item.ImageUrl)"><img src="@Url.Content(item.ImageUrl)" alt="image"/></a>
                                         </td>
                                         <td>@item.FullName</td>
                                         <td>@item.Gender</td>

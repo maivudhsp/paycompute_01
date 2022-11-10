@@ -216,5 +216,17 @@ namespace Paycompute.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+
+        [HttpGet]
+        public IActionResult download(string stringFile)
+        {
+            string[] fileNames = stringFile.Split('/');
+            string fileName = fileNames[3];
+            var uploadDir = @"images/employees";
+            var webrootPath = _hostingEnvironment.WebRootPath;
+            var path = Path.Combine(webrootPath, uploadDir, fileName);
+            byte[] bytes = System.IO.File.ReadAllBytes(fileName);
+            return File(bytes, "application/octer-stream", stringFile);
+        }
     }
 }
